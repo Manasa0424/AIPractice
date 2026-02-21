@@ -1,13 +1,19 @@
 [project]
-name = "aicheck"
+name = "llm-practicw"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Manasa"}
+    {name = "manasa"}
 ]
-requires-python = ">=3.12,<=4"
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
 dependencies = [
-    "numpy (>=2.4.2,<3.0.0)"
+    "python-dotenv (==1.1.1)",
+    "langchain (==0.3.27)",
+    "langchain-google-genai (==2.1.12)",
+    "numpy (==2.2.0)",
+    "pandas (==2.2.2)",
+    "streamlit (==1.50.0)",
 ]
 
 
