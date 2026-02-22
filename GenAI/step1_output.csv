@@ -1,0 +1,299 @@
+Issue_Description,Category,Subcategory,Assignment_group,Resolution_Notes,Incident_Summary
+Performance issue in Oracle DB,Database,Oracle,Service Desk,"Performance issue in Oracle DB due high CPU usage in oracle DB due to inefficient query execution.
+Resolution:
+Execution plans optimized and indexes added.Post implementation system performance is normal.","Category:Database | Sub-Category: Oracle
+---
+**Summary of Issue and Resolution:**
+A critical performance degradation was observed within the Oracle Database environment, primarily characterized by persistently elevated CPU utilization. Detailed investigation revealed that the root cause was inefficient execution plans for frequently executed queries, leading to sub-optimal resource consumption. To mitigate this, a targeted approach was implemented involving the optimization of identified inefficient query execution plans and the strategic creation of new database indexes. Post-implementation monitoring confirmed the successful restoration of optimal system performance and normalized CPU utilization.
+
+---
+**Incident Life-Cycle:**
+*   **Detection & Reporting:** A performance bottleneck was identified in the Oracle Database, manifesting as high CPU usage.
+*   **Diagnosis:** In-depth analysis pinpointed inefficient query execution plans as the direct cause of the elevated CPU consumption.
+*   **Resolution Implementation:** Query execution plans were optimized, and new, relevant indexes were strategically added to enhance data retrieval efficiency.
+*   **Verification:** Post-resolution monitoring confirmed the successful restoration of normal database performance and CPU utilization levels.
+
+---
+**Resolution Steps:**
+*   **Identify High-Impact Queries:** Utilize database performance monitoring tools (e.g., AWR reports, ASH, V$SQL, V$SESSION, ADDM reports) to pinpoint queries that are consuming significant CPU resources and exhibiting poor execution performance.
+*   **Analyze Execution Plans:** For the identified queries, thoroughly analyze their current execution plans to understand bottlenecks, such as full table scans on large tables, inefficient join methods, or excessive logical/physical reads.
+*   **Optimize Query Execution Plans:**
+    *   **Rewrite Inefficient SQL:** Refactor complex or poorly written SQL queries to improve their logic and reduce unnecessary data access.
+    *   **Update Statistics:** Ensure that database statistics for all relevant tables, indexes, and columns are up-to-date to allow the Oracle optimizer to generate optimal execution plans.
+    *   **Utilize SQL Plan Management:** Consider using SQL Plan Baselines or SQL Profiles for critical queries to ensure stable and optimal execution plans across database changes.
+*   **Create/Optimize Indexes:** Based on the execution plan analysis, identify missing or ineffective indexes. Create new, appropriate indexes (e.g., B-tree, bitmap, function-based) or modify existing ones to facilitate faster data retrieval and reduce I/O operations.
+*   **Implement Changes:** Apply the optimized queries and new/modified indexes, preferably first in a controlled testing environment, followed by a phased rollout to production during a scheduled maintenance window.
+*   **Monitor and Verify Performance:** Continuously monitor key database performance metrics (CPU usage, query response times, I/O, wait events) post-implementation to confirm the resolution and sustained performance improvement. Document the observed improvements.
+---"
+webmail unable to access links,Password Reset,Webmail,Service Desk,"Issue:  webmail unable to access links
+
+Resolution
+
+1. Confirm the Email Provider:
+Identified which email service you're using (e.g., Gmail, Outlook, Yahoo).
+
+2. Initiate Password Reset:
+Followed the specific password reset process for user email provider, which will take to recovery link.
+
+Receiving the Email but Can't Access:
+Verified the Link: Ensure the link in the reset email is valid and hasn't expired.
+Clear Browser Cache/Cookies: Cached data can sometimes interfere with the reset process.
+
+Able to open links in emails","Category:Password Reset | Sub-Category: Webmail
+---
+**Incident Summary & Resolution Overview:**
+The user reported an inability to access links within their webmail application, specifically hindering their attempt to utilize a password recovery link received during a password reset process. The resolution involved guiding the user through the standard password reset procedure for their identified email provider. When the user encountered issues accessing the recovery link within the reset email, further troubleshooting was performed, including verifying the link's validity and clearing browser cache and cookies. These steps successfully resolved the inability to access links, allowing the user to proceed with their password reset.
+
+**Incident Life-Cycle:**
+The incident commenced with a user reporting difficulty accessing links within their webmail, which specifically prevented them from completing a password reset via a received recovery link. The resolution process involved identifying the user's email service, initiating the password reset, and systematically troubleshooting the link access issue by verifying link integrity and managing browser-side data. The issue was successfully mitigated, restoring full link accessibility.
+
+---
+**Resolution Steps:**
+
+This knowledge article addresses scenarios where a user is unable to access links within their webmail, particularly when attempting to use a password recovery link.
+
+**Scenario 1: Initiating a Webmail Password Reset**
+
+*   **Step 1: Identify Your Email Provider**
+    *   Confirm the specific email service you are attempting to reset the password for (e.g., Gmail, Outlook, Yahoo, or a specific corporate webmail platform).
+*   **Step 2: Initiate the Password Reset Process**
+    *   Navigate to the official password reset page provided by your identified email service.
+    *   Follow the on-screen prompts to begin the password recovery procedure, which typically involves entering your email address to receive a recovery link.
+
+**Scenario 2: Troubleshooting ""Unable to Access Recovery Link"" (Received Email, Link Unresponsive)**
+
+*If you have successfully received the password reset email but are unable to click, open, or otherwise access the recovery link within it:*
+
+*   **Step 1: Verify Link Validity and Expiry**
+    *   Carefully inspect the link within the reset email to ensure it appears complete and has not been truncated.
+    *   Confirm that the password reset link has not expired. Most recovery links are time-sensitive and become invalid after a certain period. If the link has expired, please initiate a new password reset process from Step 2 of Scenario 1.
+*   **Step 2: Clear Browser Cache and Cookies**
+    *   Accumulated browser cache and cookies can sometimes interfere with website functionality and link navigation, leading to unresponsiveness.
+    *   Clear your web browser's cache and cookies.
+    *   After clearing, close and reopen your browser, then attempt to access the link again.
+    *   *Alternatively, try opening the link in an incognito/private browsing window or a different web browser to rule out browser-specific issues.*"
+Poor Merge and Conflict Resolution,Inquiry_Help,Internal Application,Service Desk,Use third-party merge tools for conflict resolution. Migrate to a system like Git or TFVC with built-in merge tracking.,"Category:Inquiry_Help | Sub-Category: Internal Application
+---
+**Incident Summary:**
+An incident was reported concerning persistent difficulties and inefficiencies encountered during merge operations and conflict resolution within our internal application. Analysis revealed limitations in the current system's native capabilities for handling complex merges, leading to degraded user experience and potential workflow bottlenecks. This ticket documents the immediate resolution steps and a strategic recommendation to address these issues comprehensively.
+
+**Issue Description:**
+Users are experiencing significant challenges and prolonged resolution times when attempting to merge changes and resolve conflicts within the internal application. The current system's built-in merge and conflict resolution functionalities are proving inadequate for complex scenarios, resulting in manual workarounds, increased error potential, and a detrimental impact on collaborative development workflows.
+
+**Resolution Steps (Immediate Conflict Resolution):**
+For immediate mitigation and improved handling of merge conflicts within the current internal application environment:
+
+*   **Identify and Integrate Third-Party Tools:** Select and integrate a robust third-party merge and diff tool (e.g., KDiff3, Beyond Compare, Meld, etc.) known for its advanced visual comparison and conflict resolution capabilities.
+*   **Configure Default Tooling:** Configure the chosen third-party tool to be the primary merge and diff handler within your development environment and for the relevant internal application repositories or file types.
+*   **Utilize Advanced Features:** Leverage the advanced functionalities of the third-party tool to systematically review conflicting changes, identify resolution paths, and apply merges with greater precision and efficiency.
+*   **Team Training & Standardization:** Ensure all team members are adequately trained on the effective use of the selected third-party tool to standardize conflict resolution processes and minimize future discrepancies.
+
+**Strategic Recommendation (Long-Term System Enhancement):**
+To fundamentally address the root causes of poor merge and conflict resolution and to enhance overall version control capabilities and team productivity:
+
+*   **Evaluate Migration to Modern VCS:** Conduct a comprehensive evaluation of the benefits and feasibility of migrating the internal application's version control to a modern, enterprise-grade system such as Git or Team Foundation Version Control (TFVC).
+*   **Prioritize Built-in Merge Tracking:** Select a new Version Control System (VCS) that offers superior, built-in merge tracking, sophisticated branching strategies, and highly capable conflict resolution mechanisms designed for modern collaborative development workflows.
+*   **Develop Migration Plan:** Formulate a detailed migration plan encompassing data transfer, repository restructuring, integration points, and a phased rollout strategy to ensure a seamless transition with minimal disruption to ongoing operations.
+*   **Comprehensive Training & Adoption:** Provide extensive training for all affected development and operations teams on the new VCS's features, best practices for branching and merging, and its integrated tools for efficient conflict resolution.
+*   **Anticipated Benefits:** A successful migration will significantly improve merge accuracy, reduce manual conflict resolution efforts, enable more flexible development workflows, and enhance overall code quality and team collaboration.
+---"
+Lack of Atomic Commits,Inquiry_Help,Internal Application,Service Desk,"Avoid large check-in; break changes into smaller, manageable chunks. Sitch to a modern VCS Like GIT, which guarantees atomic commits","Category:Inquiry_Help | Sub-Category: Internal Application
+---
+**Summary of Incident & Resolution:**
+An inquiry was raised concerning the challenges of ensuring atomic commits during internal application development, specifically addressing the potential for incomplete or inconsistent code changes. The investigation identified that the issue could arise from either large, monolithic code check-ins, limitations of the existing Version Control System (VCS), or a combination thereof. The resolution outlines best practices for improving commit hygiene and provides a strategic recommendation for adopting modern VCS solutions to guarantee transactional integrity of code changes.
+
+---
+**Resolution Steps:**
+
+To effectively manage code changes and guarantee the atomicity of commits within internal application development, please follow these guidelines:
+
+*   **Improve Commit Granularity and Practice:**
+    *   **Break Down Changes:** Decompose larger feature developments, bug fixes, or refactoring efforts into smaller, logically independent units of work. Each commit should represent a complete, functional, and testable change.
+    *   **Ensure Self-Contained Commits:** Every commit should be self-contained, addressing a single, specific task or bug. This approach prevents the introduction of partial or inconsistent changes and greatly simplifies code reviews, rollbacks, and debugging processes.
+    *   **Focus on a Single Purpose:** Aim for each commit message to clearly describe a singular purpose (e.g., ""Implement user authentication flow,"" ""Fix database connection bug in module X,"" ""Refactor logging utility to use new library"").
+
+*   **Strategic Version Control System (VCS) Modernization:**
+    *   **Evaluate Current VCS Capabilities:** Assess whether your existing Version Control System inherently supports or enforces atomic commit operations. Some legacy or centralized VCSs may not provide strong guarantees, potentially leading to incomplete changes in the event of an interruption.
+    *   **Consider Migration to Modern DVCS:** If the current VCS proves inadequate for consistently ensuring atomic commits, it is strongly recommended to initiate a transition to a modern Distributed Version Control System (DVCS) such as Git. Git is architected by design to guarantee atomic commits, significantly enhancing code integrity, simplifying collaborative development workflows, and providing robust, reliable version history management.
+
+---"
+File Corruption,Inquiry_Help,Internal Application,Service Desk,Use the Analyze.exe utility (included with sourcesafe) to detect and repair corruption. Restore from a backup if corruption is irreparable. Migrate to a modern version control system,"Category:Inquiry_Help | Sub-Category: Internal Application
+---
+Incident Summary:
+This incident addresses a critical issue of file corruption specifically impacting an internal application utilizing a legacy version control system, identified as Microsoft Visual SourceSafe. The inquiry sought comprehensive assistance in diagnosing, repairing, and preventing recurrence of such data integrity failures. The resolution strategy encompasses immediate repair attempts, data recovery from backups if necessary, and a strategic recommendation for migration to a more robust and modern version control solution to enhance system resilience.
+
+Incident Life-cycle:
+1.  **Detection & Reporting**: The incident began with a user reporting critical file corruption within the SourceSafe-managed internal application, indicating a severe data integrity issue.
+2.  **Diagnosis & Analysis**: Initial investigation quickly pinpointed the SourceSafe database as the source of corruption, necessitating the use of specialized diagnostic tools like `Analyze.exe`.
+3.  **Resolution & Mitigation**: The resolution involved an initial attempt to repair the corruption using the system's native utility. If unsuccessful, restoration from a validated backup was the next step. Crucially, a long-term strategic recommendation for migrating to a modern version control system was proposed to enhance system resilience and prevent future occurrences of similar data corruption.
+
+Resolution Steps:
+
+**Scenario 1: Detecting and Repairing Corruption**
+
+*   **Identify the Affected Database**: Determine the exact path to the corrupted Microsoft Visual SourceSafe database. This is typically the location of the `srcsafe.ini` file.
+*   **Locate `Analyze.exe`**: Navigate to the directory where Microsoft Visual SourceSafe is installed (e.g., `C:\Program Files\Microsoft Visual SourceSafe\win32`). The `Analyze.exe` utility is located here.
+*   **Execute `Analyze.exe` for Analysis and Repair**: Open a command prompt with administrative privileges and run `Analyze.exe`, specifying the path to the SourceSafe database. Use the `-F` flag to force analysis and attempt repair.
+    *   *Example:* `Analyze.exe -F ""<path_to_SourceSafe_database\srcsafe.ini>""`
+*   **Review Analysis Report**: Carefully examine the output and log files generated by `Analyze.exe` (e.g., `analyze.log` in the SourceSafe data directory) to determine if the corruption was successfully repaired or if further action is required.
+
+**Scenario 2: Restoring from Backup (If Corruption is Irreparable)**
+
+*   **Assess Repair Outcome**: If `Analyze.exe` reports that the corruption is irreparable, or if the issue persists after running the utility, proceed with data restoration.
+*   **Identify Valid Backup**: Locate the most recent, known-good backup of the SourceSafe database. Prioritize backups that minimize data loss while ensuring data integrity.
+*   **Perform Restoration**: Restore the entire SourceSafe database from the identified backup. Ensure proper procedures are followed, including stopping all SourceSafe services or user access, to minimize data loss and maintain system integrity during the restoration process.
+
+**Scenario 3: Strategic Recommendation for Future Prevention**
+
+*   **Initiate Migration Planning**: To prevent recurrence of similar file corruption issues, enhance data integrity, and leverage modern version control capabilities, it is strongly recommended to initiate a project for migrating the internal application's version control system.
+*   **Evaluate Modern VCS Solutions**: Research and select a modern version control system (e.g., Git, SVN, Azure DevOps, GitLab) that offers improved stability, better performance, enhanced security, and superior collaboration features compared to legacy systems.
+*   **Develop and Execute Migration Plan**: Create a comprehensive migration plan, including data transfer strategies, user training, and a phased rollout to ensure a smooth transition and minimal disruption to operations.
+---"
+Laptop keyboard randomly stops working,Hardware,Keyboard,Service Desk,"Troubleshooting steps:
+
+Check for latest windows version, and keyboard drivers on your device
+go to settings> windows update> update
+go to device manager> keyboard> update the drivers
+
+Search for find and fix keyboard problems on your device and run the troubleshooter to see if it can find any issues.
+
+Also, connect an external keyboard to see if it stops working as well, if the external keyboard doesn't stop working then it is a hardware issue and you should get it replaced.
+
+Replace Laptop
+","**Category:Hardware | Sub-Category: Keyboard**
+---
+**Incident Overview:**
+Users report an intermittent issue where the integrated laptop keyboard randomly ceases to function, impacting usability and productivity. This knowledge article outlines a structured approach to diagnose and resolve such incidents, differentiating between software/driver-related issues and potential hardware malfunctions.
+
+**Resolution Steps:**
+
+To effectively troubleshoot and resolve the issue of a laptop keyboard randomly stopping, follow these steps, which are divided into software/driver diagnostics and hardware verification scenarios:
+
+**Scenario 1: Software and Driver Troubleshooting**
+
+Begin by ensuring that the operating system and keyboard drivers are up-to-date and that no software conflicts are present.
+
+1.  **Update Windows Operating System:**
+    *   Navigate to `Settings` > `Windows Update`.
+    *   Check for and install all available updates. A system restart may be required after updates are applied.
+2.  **Update Keyboard Drivers:**
+    *   Right-click the `Start` button and select `Device Manager`.
+    *   Expand the `Keyboards` section.
+    *   Right-click on your specific keyboard device (e.g., ""Standard PS/2 Keyboard"" or similar) and select `Update driver`.
+    *   Choose `Search automatically for updated driver software`. If no new driver is found, consider selecting `Browse my computer for driver software` followed by `Let me pick from a list of available drivers on my computer` to try an alternative compatible driver.
+    *   Restart the laptop after updating the drivers.
+3.  **Run the Keyboard Troubleshooter:**
+    *   In the Windows search bar, type ""Find and fix keyboard problems"" and select the corresponding result.
+    *   Follow the on-screen instructions to execute the troubleshooter, allowing it to automatically detect and attempt to resolve any keyboard-related issues.
+
+**Scenario 2: Hardware Diagnosis and Resolution**
+
+If the software and driver troubleshooting steps do not resolve the issue, proceed to diagnose a potential hardware fault with the integrated keyboard.
+
+1.  **Test with an External Keyboard:**
+    *   Connect a known working external USB keyboard to the laptop.
+    *   Utilize the external keyboard for a period to observe if it functions consistently without exhibiting the same intermittent stoppage issues as the integrated keyboard.
+2.  **Evaluate Test Results:**
+    *   **If the external keyboard functions reliably and does not randomly stop working:** This indicates a high probability of a hardware failure with the integrated laptop keyboard.
+    *   **If the external keyboard also experiences random stoppages:** This suggests a more complex underlying system issue (e.g., motherboard, power management) that would require further investigation beyond a simple keyboard replacement.
+3.  **Hardware Replacement:**
+    *   Based on the confirmation from step 2.1 (external keyboard works, internal does not), the recommended resolution is the replacement of the faulty integrated laptop keyboard assembly. Depending on the device model and repair feasibility, this may involve replacing the keyboard component or, in some cases, the entire laptop if a component-level replacement is not practical or cost-effective."
+How to setup a Webex meeting,Inquiry_Help,Internal Application,Service Desk,Educated customer on how he can do it going forward and can avoid a call to the IT desk . Customer was happy with the same and no other issues reported .,"```
+Category:Inquiry_Help | Sub-Category: Internal Application
+---
+**Incident Summary:**
+An inquiry was received from a user requesting guidance on the process of setting up a Webex meeting.
+
+**Incident Life-cycle:**
+The incident commenced with a user submitting an inquiry seeking clear instructions on how to schedule a Webex meeting. IT support promptly addressed the request by providing comprehensive, step-by-step guidance. This intervention successfully resolved the user's immediate query and equipped them with the necessary knowledge to independently perform this action in the future. The user confirmed satisfaction with the resolution, reporting no additional issues, leading to the successful closure of the ticket.
+
+**Resolution Notes (Rephrased):**
+Detailed, user-friendly instructions were provided to the customer on the end-to-end process of scheduling a Webex meeting. This educational engagement empowers the user to confidently perform this task independently, thereby enhancing self-service capabilities and proactively reducing the need for future IT support calls for routine meeting setups.
+
+**Resolution Steps:**
+To schedule a Webex meeting, please follow these instructions:
+
+*   **1. Access Webex:**
+    *   Open the Cisco Webex Meetings desktop application installed on your computer, OR
+    *   Navigate to your organization's Webex web portal (e.g., `yourcompany.webex.com`) using a web browser.
+
+*   **2. Log In:**
+    *   If prompted, log in using your corporate credentials (e.g., username and password).
+
+*   **3. Initiate Meeting Schedule:**
+    *   From the main dashboard or navigation menu, locate and click on the ""Schedule a Meeting"" button.
+
+*   **4. Enter Meeting Details:**
+    *   **Meeting Topic:** Provide a clear and descriptive title for your meeting (e.g., ""Team Sync Meeting,"" ""Project X Review"").
+    *   **Date and Time:** Select the desired date, start time, and estimated duration for the meeting. Ensure the correct time zone is selected.
+    *   **Attendees:** Enter the email addresses of all participants you wish to invite. You may be able to search your company directory directly from this field.
+    *   **Password (Optional):** If enhanced security is required, you can set a meeting password. Attendees will need this to join.
+    *   **Agenda (Optional):** Add any relevant agenda items or notes to be included in the invitation.
+
+*   **5. Review and Schedule:**
+    *   Carefully review all the entered details to ensure accuracy (topic, date, time, attendees).
+    *   Click the ""Schedule"" button to finalize the meeting creation.
+
+*   **6. Invitation Sent:**
+    *   Webex will automatically generate and send calendar invitations, including the meeting link and all relevant details, to all specified attendees.
+---
+```"
+subscription Traps,Inquiry_Help,Internal Application,Service Desk,"Use Revo Uninstaller to remove the cleaner and leftover files, Switch to free/open-source alternatives.","Category:Inquiry_Help | Sub-Category: Internal Application
+---
+**Issue Summary:**
+This article addresses incidents where users encounter ""subscription traps"" associated with unwanted or deceptive applications, often disguised as system ""cleaners"" or utility tools. These applications typically mislead users into subscriptions or payments after installation or a trial period. The resolution focuses on the complete removal of such problematic software and promoting the adoption of secure, legitimate alternatives to prevent future occurrences.
+
+**Incident Life-cycle:**
+An internal user reported an issue categorized as an ""Inquiry_Help"" regarding an ""Internal Application"" that was exhibiting ""subscription trap"" behavior. This typically involves an application, often a ""cleaner,"" demanding payment or subscription for its services, leading to user confusion and frustration. The incident was resolved by providing clear instructions for the thorough uninstallation of the deceptive software and recommending a proactive shift towards verified, free, or open-source alternatives.
+
+**Resolution Steps:**
+*   **Step 1: Identify and Isolate the Problematic Application:**
+    *   Carefully identify the specific ""cleaner"" application or any software on your system that is initiating subscription prompts or exhibiting suspicious behavior without prior consent.
+*   **Step 2: Perform a Comprehensive Uninstallation using Revo Uninstaller:**
+    *   To ensure complete removal and prevent leftover files from causing further issues, utilize **Revo Uninstaller** (or an equivalent advanced uninstallation tool) for the identified application.
+    *   **Detailed Instructions for Revo Uninstaller:**
+        1.  Launch **Revo Uninstaller**.
+        2.  From the list of installed programs, select the problematic application.
+        3.  Choose the **""Advanced""** uninstallation mode. This mode performs a deeper scan for residual files and registry entries after the application's built-in uninstaller runs.
+        4.  Follow the on-screen prompts to first execute the application's native uninstaller.
+        5.  After the initial uninstallation, Revo Uninstaller will scan for leftovers. Review the detected files, folders, and registry entries, and proceed to remove all identified remnants to ensure a clean system.
+*   **Step 3: Adopt Secure and Verified Software Alternatives:**
+    *   To mitigate the risk of encountering future ""subscription traps,"" refrain from installing unverified or suspicious ""cleaner"" and optimization tools.
+    *   Prioritize switching to reputable, free, or open-source software solutions for any system utility or maintenance needs. Always consult with the IT department or refer to approved software lists for recommendations on secure and legitimate applications.
+---"
+Malware Disguised as cleaners,Inquiry_Help,Internal Application,Service Desk,"Scan with Malwarebytes or HitmanPro, Download tools only from official sites, Stick to reputable software.","Category:Inquiry_Help | Sub-Category: Internal Application
+---
+### Incident Summary: Malware Disguised as Cleaners
+
+An incident was reported concerning user inquiries about malicious software masquerading as system cleaning utilities, potentially impacting internal application environments. This ticket was categorized to provide immediate assistance and establish preventative measures. The resolution focused on empowering users with the knowledge to identify, remediate, and prevent such security threats by advocating for secure software acquisition and usage practices.
+
+---
+### Resolution Steps:
+
+#### Scenario 1: Suspected or Confirmed Malware Infection
+
+If you suspect your system has been compromised by malware disguised as a system cleaner:
+
+*   **Initiate a System Scan:** Immediately perform a comprehensive system scan using approved anti-malware tools. Recommended tools include **Malwarebytes** or **HitmanPro**.
+*   **Follow Remediation Instructions:** Adhere to the instructions provided by the anti-malware software to quarantine and remove any detected threats.
+*   **Contact IT Support:** If the issue persists, the malware cannot be removed, or if you require further assistance, please contact the IT Support team for advanced troubleshooting.
+
+#### Scenario 2: Prevention and Best Practices for Software Installation
+
+To mitigate the risk of future infections and maintain system integrity, adhere to the following best practices when downloading and installing software:
+
+*   **Utilize Official Software Sources:** Always download and install software, especially system utilities and cleaners, exclusively from their official vendor websites or approved internal software repositories. Avoid third-party download sites, as they often bundle legitimate software with unwanted or malicious programs.
+*   **Prioritize Reputable Software:** Exercise caution and prioritize the use of well-established, reputable software applications with proven security records. Be wary of unfamiliar programs or unsolicited recommendations, particularly those making exaggerated claims about system performance enhancement."
+False Positives,Inquiry_Help,Internal Application,Service Desk,"Review files before deletion, Whitelist important folders, Use tools with granular control, Like Treesize to manually inspect storage.","Category:Inquiry_Help | Sub-Category: Internal Application
+---
+Summary:
+This knowledge article addresses the challenge of ""false positives"" encountered within internal applications, where the system incorrectly flags legitimate files or folders for action (e.g., deletion, quarantine). The guidance provided herein outlines essential steps and best practices to prevent such occurrences, safeguard critical data, and ensure accurate data management within internal application environments.
+
+Incident Life-cycle:
+This incident originated from a user inquiry reporting ""false positives"" within an internal application. The issue was investigated to understand the root cause of erroneous data identification. A comprehensive resolution was developed, focusing on proactive data verification, configuration best practices, and the strategic use of specialized tools, leading to the successful mitigation of the reported issue and incident closure.
+
+Resolution Steps:
+*   **Thorough Data Review and Verification:** Before authorizing any permanent action (e.g., deletion, archiving, modification) on files or folders identified by the internal application, always conduct a meticulous manual review. This critical step ensures that legitimate and important data is not inadvertently compromised due to false positive flagging.
+*   **Implement Proactive Whitelisting:** Identify and configure essential folders and files for whitelisting within the internal application's settings or its associated management tools. Proactive whitelisting is crucial to explicitly exclude critical data from automated scans or processes that might otherwise misidentify them as false positives.
+*   **Utilize Granular Storage Inspection Tools:** Leverage specialized utilities that offer detailed insights and granular control over storage contents (e.g., TreeSize, WinDirStat, or similar advanced file system analyzers). These tools facilitate manual inspection and verification, empowering users to accurately distinguish legitimate data from false positives flagged by automated internal application processes.
+---"
