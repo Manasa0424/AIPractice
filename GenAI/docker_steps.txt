@@ -1,0 +1,14 @@
+# Build a docker image/Container
+
+docker build -t inc_0221 .
+
+
+# Tag the image aliging the name of the Artifact registry ( copy path from the repository)
+
+docker tag inc_0221 us-central1-docker.pkg.dev/XXXXXXXXXX/YYY/inc_0221:v1
+
+
+# Push the container to Artifact registry
+
+docker push us-central1-docker.pkg.dev/XXXXXXXXXX/YYY/inc_0221:v1
+
